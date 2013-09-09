@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<moziSpawner type="mosquitoes">
+		<x>75</x>
+		<y>196</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<moziSpawner type="mosquitoes">
+		<x>107</x>
+		<y>303</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<tutorialScreen>
+		<id>100</id>
+		<y>193</y>
+	</tutorialScreen>
+	<tutorialScreen>
+		<id>100</id>
+		<y>269</y>
+	</tutorialScreen>
+	<obj type="flytrap">
+		<x>113</x>
+		<y>83</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>290</x>
+		<y>75</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+</map>
