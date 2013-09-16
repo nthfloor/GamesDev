@@ -72,7 +72,7 @@ public class MainFrame extends JFrame{
 		this.setResizable(false);
 		
 		//initialize variables
-		Dimension mapSize = new Dimension(800,10000);		
+		Dimension mapSize = new Dimension(800,30000);		
 		shape = "selection";
 		object_selected = false;
 		
@@ -91,7 +91,7 @@ public class MainFrame extends JFrame{
 		setJMenuBar(menuBar);		
 		
 		//buttons and icons	
-		JPanel buttons = new JPanel(new GridLayout(7,2));
+		JPanel buttons = new JPanel(new GridLayout(8,2));
 		buttons.setBounds(30, 15, (screenWidth/3)-70, screenHeight/2);
 		add(buttons, BorderLayout.WEST);
 		
@@ -114,6 +114,9 @@ public class MainFrame extends JFrame{
 		JButton flySpawnBtn = new JButton("Add Fly spawn point");
 		flySpawnBtn.addMouseListener(new ButtonListener(this));
 		buttons.add(flySpawnBtn);
+		JButton moziSpawnBtn = new JButton("Add Mozi spawn point");
+		moziSpawnBtn.addMouseListener(new ButtonListener(this));
+		buttons.add(moziSpawnBtn);
 		JButton tutorialBtn = new JButton("Add Tutorial");
 		tutorialBtn.addMouseListener(new ButtonListener(this));
 		buttons.add(tutorialBtn);
@@ -124,12 +127,12 @@ public class MainFrame extends JFrame{
 				
 		objWidth = new JLabel("Width:");
 		objDetails.add(objWidth);
-		numberModel = new SpinnerNumberModel(50,0,1000,1);
+		numberModel = new SpinnerNumberModel(150,0,1000,1);
 		widthInput = new JSpinner(numberModel);
 		objDetails.add(widthInput);
 		objHeight = new JLabel("Height:");
 		objDetails.add(objHeight);
-		numberModel = new SpinnerNumberModel(50,0,1000,1);
+		numberModel = new SpinnerNumberModel(150,0,1000,1);
 		heightInput = new JSpinner(numberModel);
 		objDetails.add(heightInput);
 		objRotate = new JLabel("Rotation:");
@@ -139,11 +142,12 @@ public class MainFrame extends JFrame{
 		objDetails.add(rotateInput);
 		dispersionlbl = new JLabel("Dispersion:");
 		objDetails.add(dispersionlbl);
+		numberModel = new SpinnerNumberModel(100,0,1000,1);
 		dispInput = new JSpinner(numberModel);
 		objDetails.add(dispInput);
 		obj_idlbl = new JLabel("ID:");
 		objDetails.add(obj_idlbl);
-		numberModel = new SpinnerNumberModel(100,0,1000,1);
+		numberModel = new SpinnerNumberModel(1,0,100,1);
 		idInput = new JSpinner(numberModel);
 		objDetails.add(idInput);
 		numberBoids = new JLabel("# of Flies:");
@@ -169,6 +173,7 @@ public class MainFrame extends JFrame{
 				
 		scroller = new JScrollPane(mobileScreen);		
 		scroller.setBounds(x, y, screenSize.width-x-15, screenSize.height-60); 
+//		scroller.setPreferredSize(new Dimension(screenSize.width-x-15,screenSize.height-60));
 		scroller.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		scroller.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		scroller.setVisible(true);
@@ -190,7 +195,7 @@ public class MainFrame extends JFrame{
 			idInput.setEnabled(false);		
 			numBoidsInput.setEnabled(false);
 		}
-		else if(shape.equals("bench")){
+		else if(shape.equals("bench") || shape.equals("table")){
 			widthInput.setEnabled(false);
 			heightInput.setEnabled(false);
 			rotateInput.setEnabled(false);
@@ -303,6 +308,10 @@ public class MainFrame extends JFrame{
 				parent.shape = "bench";
 				parent.object_selected = true;
 			}
+			else if(caller.getText().equals("Add Mozi spawn point")){	
+				parent.shape = "table";
+				parent.object_selected = true;
+			}
 			else if(caller.getText().equals("Add Tutorial")){	
 				parent.shape = "star";
 				parent.object_selected = true;
@@ -338,9 +347,13 @@ public class MainFrame extends JFrame{
 			int height = (Integer) heightInput.getValue();
 			float rotation = (Integer) rotateInput.getValue();
 			int dispersion = (Integer) dispInput.getValue();
+			int numBoids = (Integer) numBoidsInput.getValue();
 			int obj_id = (Integer) idInput.getValue();
-			int x = e.getX()-width/2;
-			int y = e.getY()-height/2;
+			int x = (int)(e.getX() -scroller.getAlignmentX()-width/2);
+			int y = (int)(e.getY() -scroller.getAlignmentX()-height/2);
+			
+			System.out.println(parent.shape+": "+(int)(e.getX()-scroller.getAlignmentX())+" ; "+
+			(int)(e.getY()-scroller.getAlignmentY()));
 			
 			if(parent.shape.equals("selection")){
 				//check if user right clicked
@@ -364,20 +377,31 @@ public class MainFrame extends JFrame{
 				map.addObjectToMap("triangle",rotation,0,0,0,new Dimension(width,height),x,y);
 			}
 			else if(parent.shape.equals("bench")){	
-				map.addObjectToMap("bench",0,dispersion,0,0,new Dimension(width+dispersion,30),x-dispersion/2,y+20);
+				
+				x = (int)(e.getX() -scroller.getAlignmentX()- dispersion/2);
+				y = (int)(e.getY() -scroller.getAlignmentY()-40);
+				System.out.println("Clicked: "+x+";"+y);
+				map.addObjectToMap("bench",0,dispersion,0,numBoids,new Dimension(width+dispersion,30),x-dispersion/2,y+20);
+			}
+			else if(parent.shape.equals("table")){	
+				x = (int)(e.getX() -scroller.getAlignmentX()-dispersion/2);
+				y = (int)(e.getY() -scroller.getAlignmentY()-40);
+				map.addObjectToMap("table",0,dispersion,0,numBoids,new Dimension(width+dispersion,30),x-dispersion/2,y+20);
 			}
 			else if(parent.shape.equals("star")){	
-				map.addObjectToMap("star",0,0,obj_id,0,new Dimension(25,25),x+10,y+20);
+				x = (int)(e.getX() -scroller.getAlignmentX()-15);
+				y = (int)(e.getY() -scroller.getAlignmentY()-20);
+				map.addObjectToMap("star",0,0,obj_id,0,new Dimension(25,25),x,y);
 			}
 							
 		}
 
 		@Override
 		//display an image of object that user has selected to place on map
-		public void mouseEntered(MouseEvent arg0) {
+		public void mouseEntered(MouseEvent e) {
 			if(parent.shape.equals("selection")){
 				mobileScreen.setToolTipText("Right click to delete object");
-			}
+			}	
 		}
 
 		@Override
@@ -419,8 +443,8 @@ public class MainFrame extends JFrame{
 			if(parent.object_selected)
 				show_image = true;
 			if(show_image){
-//				System.out.println("Moved: "+parent.shape+" : "+e.getX()+" : "+e.getY());
-				map.drawShapes(parent.shape,e.getX(),e.getY());
+				map.drawShapes(parent.shape,(int)(e.getX()-scroller.getAlignmentX()),(int)(e.getY()-scroller.getAlignmentY()));
+				
 			}
 		}
 	}

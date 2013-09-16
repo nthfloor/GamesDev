@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<tutorialScreen>
+		<id>6</id>
+		<y>6</y>
+	</tutorialScreen>
+	<obj type="frog">
+		<x>631</x>
+		<y>1902</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<tutorialScreen>
+		<id>1</id>
+		<y>551</y>
+	</tutorialScreen>
+	<moziSpawner type="mosquitoes">
+		<x>513</x>
+		<y>3547</y>
+		<numberOfBoids>10</numberOfBoids>
+		<dispersion>100</dispersion>
+	</moziSpawner>
+	<tutorialScreen>
+		<id>5</id>
+		<y>2365</y>
+	</tutorialScreen>
+	<obj type="frog">
+		<x>323</x>
+		<y>4347</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<tutorialScreen>
+		<id>2</id>
+		<y>5942</y>
+	</tutorialScreen>
+	<moziSpawner type="mosquitoes">
+		<x>686</x>
+		<y>7382</y>
+		<numberOfBoids>100</numberOfBoids>
+		<dispersion>100</dispersion>
+	</moziSpawner>
+	<obj type="frog">
+		<x>420</x>
+		<y>8031</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<tutorialScreen>
+		<id>3</id>
+		<y>8714</y>
+	</tutorialScreen>
+	<obj type="spider">
+		<x>796</x>
+		<y>9860</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>782</x>
+		<y>6844</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<tutorialScreen>
+		<id>4</id>
+		<y>11286</y>
+	</tutorialScreen>
+	<obj type="bird">
+		<x>805</x>
+		<y>12463</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>769</x>
+		<y>12655</y>
+		<numberOfBoids>50</numberOfBoids>
+		<dispersion>100</dispersion>
+	</moziSpawner>
+	<obj type="spider">
+		<x>792</x>
+		<y>13739</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>335</x>
+		<y>14781</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>618</x>
+		<y>16284</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>291</x>
+		<y>16275</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="bird">
+		<x>138</x>
+		<y>18212</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>425</x>
+		<y>18274</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>746</x>
+		<y>18902</y>
+		<numberOfBoids>200</numberOfBoids>
+		<dispersion>100</dispersion>
+	</moziSpawner>
+	<obj type="spider">
+		<x>799</x>
+		<y>20304</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>280</x>
+		<y>20721</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="spider">
+		<x>798</x>
+		<y>21456</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>659</x>
+		<y>22434</y>
+		<width>150</width>
+		<height>150</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="bird">
+		<x>185</x>
+		<y>23403</y>
+		<width>200</width>
+		<height>200</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="spider">
+		<x>803</x>
+		<y>24866</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="bird">
+		<x>187</x>
+		<y>25931</y>
+		<width>200</width>
+		<height>200</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>785</x>
+		<y>25622</y>
+		<width>200</width>
+		<height>200</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>267</x>
+		<y>26467</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>506</x>
+		<y>26537</y>
+		<width>250</width>
+		<height>250</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>377</x>
+		<y>27525</y>
+		<numberOfBoids>50</numberOfBoids>
+		<dispersion>100</dispersion>
+	</moziSpawner>
+	<tutorialScreen>
+		<id>0</id>
+		<y>29549</y>
+	</tutorialScreen>
+</map>

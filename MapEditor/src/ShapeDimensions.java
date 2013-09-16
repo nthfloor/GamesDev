@@ -26,6 +26,8 @@ public class ShapeDimensions{
 			object = "bird";
 		else if(shape.equals("bench"))
 			object = "mosquitoes";
+		else if(shape.equals("table"))
+			object = "fireflies";
 		else if(shape.equals("star"))
 			object = "tutorial";
 		else 

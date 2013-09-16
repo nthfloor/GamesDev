@@ -47,7 +47,7 @@ public class MapOutline extends JPanel implements ImageObserver{
 		this.setBackground(Color.white);
 		this.updateUI();
 		
-		background = new ImageIcon("bg_final_flat.png");	
+		background = new ImageIcon("assets/bg_final_flat.png");	
 		source = background.getImage();
 	}
 	
@@ -65,12 +65,13 @@ public class MapOutline extends JPanel implements ImageObserver{
 		int x = 0;
 		int y = 0;
 		
-		g.drawImage(source,0,0,mapSize.width,source.getHeight(this),0,0,
-				source.getWidth(this),source.getHeight(this),Color.white,this);
-		g.drawImage(source,0,source.getHeight(this),mapSize.width,source.getHeight(this)*2,0,0,
-				source.getWidth(this),source.getHeight(this),Color.white,this);
-		
-		
+		int mapHeight = (mapSize.height/10000)+(int)Math.round((mapSize.height/10000)*0.5);
+		System.out.println(mapHeight);
+		for(int i=0;i<=mapHeight;i++){
+			g.drawImage(source,0,source.getHeight(this)*i,mapSize.width,source.getHeight(this)*(i+1),0,0,
+					source.getWidth(this),source.getHeight(this),Color.white,this);
+		}
+				
 		if(shape != null){
 			x = (int)shapePosition.x-parent.getSelectedObjWidth()/2;
 			y = (int)shapePosition.y-parent.getSelectedObjHeight()/2;			
@@ -102,18 +103,20 @@ public class MapOutline extends JPanel implements ImageObserver{
 			int[] ypoints = {y+parent.getSelectedObjHeight(),y,y+parent.getSelectedObjHeight()};
 			g.fillPolygon(xpoints, ypoints, 3);	
 		}
-		else if(shape.equals("bench")){
+		else if(shape.equals("bench") || shape.equals("table")){
+			
 			g.setColor(Color.black);
-			x = x - parent.getDispersion()/2;
-			y = y + 20;
+			x = (int)shapePosition.x - parent.getDispersion();
+			y = (int)shapePosition.y - 20;
+			System.out.println("Moved: "+x+";"+y);
 			g.fillRect(x, y, parent.getSelectedObjWidth()+parent.getDispersion(), 10);
 			g.fillRect(x, y-10, 5, 30);
 			g.fillRect(x+parent.getSelectedObjWidth()+parent.getDispersion(), y-10, 5, 30);
 		}
 		else if(shape.equals("star")){
 			g.setColor(Color.black);
-			x = x + 10;
-			y = y + 20;
+			x = (int)shapePosition.x - 15;
+			y = (int)shapePosition.y - 20;
 			
 			g.fillRect(x, y, 25, 5);
 			g.fillRect(x+10, y-10, 5, 25);			
@@ -150,6 +153,12 @@ public class MapOutline extends JPanel implements ImageObserver{
 				g.fillRect(gameObjects.get(i).X, gameObjects.get(i).Y-10, 5, 30);
 				g.fillRect(gameObjects.get(i).X+ gameObjects.get(i).shapeSize.width, gameObjects.get(i).Y-10, 5, 30);
 			}
+			else if(gameObjects.get(i).object.equals("fireflies")){
+				g.setColor(Color.black);
+				g.fillRect(gameObjects.get(i).X, gameObjects.get(i).Y, gameObjects.get(i).shapeSize.width, 10);
+				g.fillRect(gameObjects.get(i).X, gameObjects.get(i).Y-10, 5, 30);
+				g.fillRect(gameObjects.get(i).X+ gameObjects.get(i).shapeSize.width, gameObjects.get(i).Y-10, 5, 30);
+			}
 			else if(gameObjects.get(i).object.equals("tutorial")){
 				g.setColor(Color.black);
 				g.fillRect(gameObjects.get(i).X, gameObjects.get(i).Y, 25, 5);
@@ -179,7 +188,7 @@ public class MapOutline extends JPanel implements ImageObserver{
 					xmlBuilder.element("obj")
 						.attribute("type",gameObjects.get(i).object)
 						.element("x")
-							.text(gameObjects.get(i).X)
+							.text(mapSize.width-gameObjects.get(i).X)
 						.pop()
 						.element("y")
 							.text(gameObjects.get(i).Y)
@@ -195,11 +204,12 @@ public class MapOutline extends JPanel implements ImageObserver{
 						.pop()						
 					.pop();
 				}
-				else if(gameObjects.get(i).object.equals("mosquitoes")){
+				else if(gameObjects.get(i).object.equals("mosquitoes") 
+						|| gameObjects.get(i).object.equals("fireflies")){
 					xmlBuilder.element("moziSpawner")
 						.attribute("type",gameObjects.get(i).object)
 						.element("x")
-							.text(gameObjects.get(i).X)
+							.text(mapSize.width-gameObjects.get(i).X)
 						.pop()
 						.element("y")
 							.text(gameObjects.get(i).Y)

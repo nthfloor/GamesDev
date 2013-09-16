@@ -1,0 +1,39 @@
+I need for my stage 1 of my game's features:
+
+Stage1: Implement multiple windows and enable level-saving
+
+1. How to display images on a panel/frame - done
+2. Grid Collision - later
+3. How to change the line that tracks the mouse pointer - done
+4. enable access to menu option in game mode - done
+5. Enable profiling and level-saving - done
+
+Stage2: Implement upgrades, textures and basic AI
+
+1. How to get the enemies to come to you - done
+2. Health bar(with regeneration) - done
+3. power-ups(only new weapons& ammo) - done
+4. enable losing/winning - done
+5. enemy healthbars - done
+6. loading bar - done
+7. Structures - done
+
+Stage3: Implement multiple levels with different evironments
+
+1. enemies - done
+3. sounds - done
+4. levels - done
+5. Restart bug - done
+6. Rotate image sprites - done
+7. Wall issue - done
+8. Animation - done
+9. spawning - done
+
+Sound: 
+1. freeplaymusic.com
+2. soundbible.com
+
+Last Hand-IN: AI
+
+1. A* algorithm
+2. anyhing else

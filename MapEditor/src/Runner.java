@@ -8,7 +8,7 @@ public class Runner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		MainFrame screen = new MainFrame(800,600);
+		MainFrame screen = new MainFrame(900,900);
 		
 		screen.setVisible(true);
 	}
