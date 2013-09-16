@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BomberMan_NBF", "WindowsGame1\BomberMan_NBF.csproj", "{260F998C-8327-449F-A035-09170758D26E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{260F998C-8327-449F-A035-09170758D26E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Debug|x86.ActiveCfg = Debug|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Debug|x86.Build.0 = Debug|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Release|x86.ActiveCfg = Release|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Release|x86.Build.0 = Release|x86
+		{260F998C-8327-449F-A035-09170758D26E}.Release|Xbox 360.ActiveCfg = Release|x86
+		{9EDFF461-6C30-4366-88AE-E800E1D172BE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9EDFF461-6C30-4366-88AE-E800E1D172BE}.Debug|x86.ActiveCfg = Debug|x86
+		{9EDFF461-6C30-4366-88AE-E800E1D172BE}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{9EDFF461-6C30-4366-88AE-E800E1D172BE}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9EDFF461-6C30-4366-88AE-E800E1D172BE}.Release|x86.ActiveCfg = Release|x86
+		{9EDFF461-6C30-4366-88AE-E800E1D172BE}.Release|Xbox 360.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
