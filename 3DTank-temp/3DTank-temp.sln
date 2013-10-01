@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3DTank-temp", "3DTank-temp\3DTank-temp.csproj", "{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Debug|x86.ActiveCfg = Debug|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Debug|x86.Build.0 = Debug|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Release|Mixed Platforms.Build.0 = Release|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Release|x86.ActiveCfg = Release|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Release|x86.Build.0 = Release|x86
+		{308F5CD6-8A3A-42B5-A52F-4B8A9B9D8092}.Release|Xbox 360.ActiveCfg = Release|x86
+		{AAE2C4AE-4F8C-4108-BDF9-2AA7DD9F6F4F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{AAE2C4AE-4F8C-4108-BDF9-2AA7DD9F6F4F}.Debug|x86.ActiveCfg = Debug|x86
+		{AAE2C4AE-4F8C-4108-BDF9-2AA7DD9F6F4F}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{AAE2C4AE-4F8C-4108-BDF9-2AA7DD9F6F4F}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{AAE2C4AE-4F8C-4108-BDF9-2AA7DD9F6F4F}.Release|x86.ActiveCfg = Release|x86
+		{AAE2C4AE-4F8C-4108-BDF9-2AA7DD9F6F4F}.Release|Xbox 360.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
