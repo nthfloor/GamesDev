@@ -1,0 +1,65 @@
+//fragment shader
+//Nathan Floor(FLRNAT001)
+
+varying vec4 diffuse,ambientGlobal, ambient;
+varying vec4 diffuse2,ambient2;
+varying vec3 normal,lightDir,halfVector;
+varying vec3 lightDir2,halfVector2;
+varying float dist;
+varying float dist2;
+
+uniform sampler2D texture;
+uniform sampler2D bumpTexture;
+
+void main()
+{
+	vec3 halfV,halfV2;
+	float NdotL,NdotHV;
+	float NdotL2,NdotHV2;
+	vec4 color = ambientGlobal;
+	vec4 color2= ambientGlobal;
+	float att, att2;
+
+	vec4 tex_color = texture2D(texture, gl_TexCoord[0].st);
+
+	vec3 new_Norm = normalize(normal);
+//	vec3 new_Norm = normalize(2.0*texture2D(bumpTexture,gl_TexCoord[0].st).rgb-1.0);//calc bumpmapped normal
+
+	/*Adjust the normal based on the bump map*/
+/*	new_Norm.x = normal.x * newNormal.x;
+	new_Norm.y = normal.y * newNormal.y;
+	new_Norm.z = normal.z * newNormal.z;*/
+
+	//light 1
+	/* compute the dot product between normal and normalized lightdir */
+	NdotL = max(dot(new_Norm, normalize(lightDir)), 0.0);
+	if (NdotL > 0.0) 
+	{
+		att = 1.0 / (gl_LightSource[0].constantAttenuation +
+				gl_LightSource[0].linearAttenuation * dist +
+				gl_LightSource[0].quadraticAttenuation * dist * dist);
+
+		color += att * (diffuse * NdotL + ambient);
+
+		halfV = normalize(halfVector);
+		NdotHV = max(dot(new_Norm,halfV),0.0);
+		color += att * gl_FrontMaterial.specular * gl_LightSource[0].specular * pow(NdotHV,gl_FrontMaterial.shininess);
+	}
+
+	//light 2
+	NdotL2 = max(dot(new_Norm, normalize(lightDir2)), 0.0);
+	if (NdotL2 > 0.0) 
+	{
+		att2 = 1.0 / (gl_LightSource[1].constantAttenuation +
+				gl_LightSource[1].linearAttenuation * dist2 +
+				gl_LightSource[1].quadraticAttenuation * dist2 * dist2);
+
+		color2 += att2 * (diffuse2 * NdotL2 + ambient2);
+
+		halfV2 = normalize(halfVector2);
+		NdotHV2 = max(dot(new_Norm,halfV2),0.0);
+		color2 += att2 * gl_FrontMaterial.specular * gl_LightSource[1].specular * pow(NdotHV2,gl_FrontMaterial.shininess);
+	}
+	
+	gl_FragColor = tex_color * (color + color2);
+}

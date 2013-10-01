@@ -1,0 +1,46 @@
+//Vertex shader
+//Nathan Floor
+
+varying vec4 diffuse,ambientGlobal,ambient;
+varying vec4 diffuse2,ambient2;
+varying vec3 normal,lightDir,halfVector,lightDir2,halfVector2;
+varying float dist,dist2;
+
+uniform sampler2D texture;
+
+void main()
+{	
+	vec4 view_vec;
+	vec3 dir;
+	vec3 dir2;
+	
+	normal = normalize(gl_NormalMatrix * gl_Normal);
+	
+	/* now normalize the light's direction */
+	view_vec = gl_ModelViewMatrix * gl_Vertex;
+	dir = vec3(gl_LightSource[0].position-view_vec);
+	dir2 = vec3(gl_LightSource[1].position-view_vec);
+
+	lightDir = normalize(dir);
+	lightDir2 = normalize(dir2);
+	
+	/* compute the distance to the light source */
+	dist = length(dir);
+	dist2 = length(dir2);
+
+	/* Normalize the halfVector to pass it to the fragment shader */
+	halfVector = normalize(gl_LightSource[0].halfVector.xyz);
+	halfVector2 = normalize(gl_LightSource[1].halfVector.xyz);
+	
+	/* Compute the diffuse, ambient and globalAmbient terms */
+	diffuse = gl_FrontMaterial.diffuse * gl_LightSource[0].diffuse;
+	ambient = gl_FrontMaterial.ambient * gl_LightSource[0].ambient;
+	diffuse2 = gl_FrontMaterial.diffuse * gl_LightSource[1].diffuse;
+	ambient2 = gl_FrontMaterial.ambient * gl_LightSource[1].ambient;
+	ambientGlobal = gl_LightModel.ambient * gl_FrontMaterial.ambient;
+	
+	gl_TexCoord[0] = gl_MultiTexCoord0;
+	gl_TexCoord[1] = gl_MultiTexCoord1;		
+
+	gl_Position = ftransform();	
+}

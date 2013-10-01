@@ -1,0 +1,68 @@
+The is a program was to get used to OpenGL. A tea-pot was drawn, allowing the user to interact with it as indicated below.
+Author: Nathan Floor (FLRNAT001)
+
+This program implements Phong shading using a vertex shader and a fragment shader. Two lights have been included, one 'red' the other 'blue'. You do have the option to rotate the lights around the teapot. Basic texturing has been included. To disable the texturing you just need to remove the texture color(tex_color) value from the following statement(at the end of the 'fragmentShader file):         
+
+	{gl_FragColor = tex_color * (color + color2);}
+
+Bump Mapping code has been included, however I did not manage to get it to work within the required time. But you can test it by uncommenting the block of code in the 'fragmentShader' file concerning 'Adjusting the normal based on the bump map', and then commenting out the old 'new_Norm' statement:
+	{vec3 new_Norm = normalize(normal);}
+
+I have used a textfile reader which I pulled from the internet(lighthouse), namely: "textfile.cpp and textfile.h". These two files were not made by me.
+
+Please note, I have had to copy my shader files and textures into the 'Debug' folder to be compiled properly with SOIL. So you need to use the makefile in there to compile the program.
+
+This program includes the following files:
+1. driver.cpp
+2. fragmentShader
+3. vertexShader
+4. textfile.cpp
+5. textfile.h
+6. bump.jpg
+7. surface.jpg
+8. makefile
+
+NOTE: I have included two folders, 'SOIL' and 'GL' for reading in textures and implementing GLEW in the senior labs, respectively. These are necessary for the successful compilation and running of the program.
+
+The 'main(void)' creates and manages the OpenGL window.
+The following controls are available to the user:
+
+'q': select the x-axis for rotation 
+'w': select the x-axis for rotation
+'e': select the x-axis for rotation
+'a': rotate around selected axis in anti-clockwise direction
+'s': rotate around selected axis in clockwise direction
+
+'u': translate pot down the x-axis
+'j': translate pot up the x-axis
+'i': translate pot up the y-axis
+'k': translate pot down the y-axis
+'o': translate pot down the z-axis(towards you)
+'l': translate pot up the z-axis(away from you)
+
+'z': zoom in
+'x': zoom out
+'up': pan camera up
+'down: pan camera down
+'left': pan camera left
+'right': pan camera right
+
+{NEW}
+'n': rotate lights clockwise
+'m': rotate lights anti-clockwise
+
+'esc': Terminates the program.
+
+The file "Makefile" compiles the program and has the following explicit rules:
+
+1. clean: deletes all '.o', binary files and other temporary files.
+2. run: runs program.
+3. build: compiles and runs the program
+
+References:
+1. nehe.gamedev.net/tutorial/
+2. gamedev.com.stackexchange.com/question/20758/how-can-i-rotate-a-camera-about-its-target-point
+3. www.swiftless.com/tutorials/opengl/camera.html
+4. www.swiftless.com/tutorials/opengltuts.html
+5. www.lighthouse3d.com/tutorials/glut-tutorial/keyboard
+
