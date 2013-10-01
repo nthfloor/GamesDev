@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	
+	<obj type="frog">
+		<x>600</x>
+		<y>1000</y>
+		<width>200</width>
+		<height>200</height>
+		<rotation>100.0</rotation>
+	</obj>
+</map>

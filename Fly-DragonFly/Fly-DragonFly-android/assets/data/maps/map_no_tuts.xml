@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<moziSpawner type="mosquitoes">
+		<x>33</x>
+		<y>791</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<obj type="flytrap">
+		<x>663</x>
+		<y>795</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="spider">
+		<x>25</x>
+		<y>1453</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="bird">
+		<x>744</x>
+		<y>1465</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>502</x>
+		<y>1504</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<moziSpawner type="mosquitoes">
+		<x>666</x>
+		<y>2268</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<obj type="flytrap">
+		<x>355</x>
+		<y>2221</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>212</x>
+		<y>2612</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>684</x>
+		<y>2848</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<obj type="bird">
+		<x>17</x>
+		<y>3343</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="spider">
+		<x>742</x>
+		<y>3614</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>333</x>
+		<y>4341</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="spider">
+		<x>45</x>
+		<y>5091</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>662</x>
+		<y>6262</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<moziSpawner type="mosquitoes">
+		<x>84</x>
+		<y>6719</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<obj type="frog">
+		<x>219</x>
+		<y>7729</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="bird">
+		<x>728</x>
+		<y>8569</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>25</x>
+		<y>8943</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+	<obj type="flytrap">
+		<x>137</x>
+		<y>8838</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="flytrap">
+		<x>576</x>
+		<y>9052</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="frog">
+		<x>333</x>
+		<y>9454</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="spider">
+		<x>0</x>
+		<y>9043</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<obj type="bird">
+		<x>9</x>
+		<y>9451</y>
+		<width>50</width>
+		<height>50</height>
+		<rotation>0.0</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+		<x>663</x>
+		<y>9568</y>
+		<numberOfBoids>0</numberOfBoids>
+		<dispersion>0</dispersion>
+	</moziSpawner>
+</map>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<obj type="spider">
+	    <x>100</x>
+	    <y>1100</y>
+	    <width>200</width>
+	    <height>200</height>
+	    <rotation>0</rotation>
+	</obj>
+	<obj type="frog">
+	    <x>600</x>
+	    <y>2000</y>
+	    <width>150</width>
+	    <height>150</height>
+	    <rotation>0</rotation>
+	</obj>
+	<obj type="bird">
+	    <x>50</x>
+	    <y>3100</y>
+	    <width>200</width>
+	    <height>200</height>
+	    <rotation>-125</rotation>
+	</obj>
+	<obj type="flytrap">
+	    <x>100</x>
+	    <y>3000</y>
+	    <width>200</width>
+	    <height>200</height>
+	    <rotation>-125</rotation>
+	</obj>
+	<moziSpawner type="mosquitoes">
+	    <x>700</x>
+	    <y>1500</y>
+	    <numberOfBoids>25</numberOfBoids>
+	    <deviation>100</deviation>
+	</moziSpawner>
+	<tutorialScreen>
+	    <id>0</id>
+	    <y>1950</y>
+	</tutorialScreen>
+</map>
